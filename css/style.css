@@ -1,0 +1,10 @@
+h1{
+    font-size: 55px;
+    font-weight: 300;
+}
+table {
+    caption-side: top;
+}
+table i{
+    cursor: pointer;
+}

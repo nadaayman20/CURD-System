@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+     <main class="container text-secondary py-5 ">
+       <section class="shadow rounded text-center ">
+          <div class="curd w-50 mx-auto py-5">
+               <h1>CRUD SYSTEM</h1>
+
+               <div class="data mt-5">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Product Name
+                        <span class="text-danger fs-5">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Product Name">
+                  </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Product Price
+                        <span class="text-danger fs-5">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="price" placeholder="Product Price">
+                  </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Product Category
+                        <span class="text-danger fs-5">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="category" placeholder="Product Category">
+                  </div>
+                  <div class="mb-3">
+                    <label for="description" class="form-label">Product Description
+                        <span class="text-danger fs-5">*</span>
+                    </label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="Product Description"></textarea>
+                  </div>
+                  <p id="invalidData" class=" text-danger"></p>
+               </div>
+
+               <div class="mt-3">
+                  <button class="btn btn-outline-info mx-1" id="btnADD" onclick="addProduct()">Add Product</button>
+                  <button class="btn btn-outline-secondary mx-1" id="btnClear" onclick=" clearForm()">Clear </button>
+               </div>
+          </div>
+
+
+       </section>
+
+       <div class="search my-5 w-75 mx-auto">
+        <input type="text" class="form-control" id="search" placeholder="Search by Product Name or Category" onkeyup="search(this.value)">
+       </div>
+       <table class="table table-hover my-5 ">
+        <caption class=" fs-5 mb-2">
+            Total : <span id="totaProduct" class="badge bg-secondary">0</span>
+         </caption>
+           <thead >
+              <tr>
+                 <th>#</th>
+                 <th>Name </th>
+                 <th>Price</th>
+                 <th>Category</th>
+                 <th>Description</th>
+                 <th>Action</th>
+              </tr>
+           </thead>
+           <tbody id="tbody" >
+          
+           </tbody>
+       </table>
+     </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
